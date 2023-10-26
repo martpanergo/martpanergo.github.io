@@ -1,1 +1,13 @@
+<!DOCTYPE html>
+<html>
 
+	<head>
+	<title>my website</title>
+	</head>
+
+	<body>
+ <h3>Hello world </h3>
+
+	</body>
+	
+</html>
