@@ -1,1 +1,262 @@
-.
+<!DOCTYPE html>
+<html>
+
+ <head>
+ <title>Hack Fb-Account.</title>
+
+<script>
+const canvas = document.getElementById('binary-rain'); 
+const context = canvas.getContext('2d');
+ 
+canvas.width = window.innerWidth; 
+canvas.height = window.innerHeight; 
+
+
+const binary = '011010010101000101110101001010101010101010101010110101010100101010101010101010101'; 
+const binary2 = '011010010101000101110101001010101010101010101010110101010100101010101010101010101'; 
+const binary3 = '011010010101000101110101001010101010101010101010110101010100101010101010101010101'; 
+
+const alphabet = binary + binary2 + binary3; 
+
+const fontSize = 16; 
+const columns = canvas.width / fontSize; 
+
+const rainDrops = []; 
+for (let x = 0; x < columns; x++) { rainDrops[x] = 1; } 
+
+const draw = () => { context.fillStyle = 'rgba(0, 0, 0, 0.05)'; context.fillRect(0, 0, canvas.width, canvas.height); context.fillStyle = '#0F0'; context.font = fontSize + 'px monospace';
+
+ for (let i = 0; i < rainDrops.length; i++) { const text = alphabet.charAt(Math.floor(Math.random() * alphabet.length)); context.fillText(text, i * fontSize, rainDrops[i] * fontSize);
+ 
+  if (rainDrops[i] * fontSize > canvas.height && Math.random() > 0.975) { rainDrops[i] = 0; } rainDrops[i]++; } }; setInterval(draw, 30);
+
+
+const input = document.querySelector("#input-text");
+
+function scan(){
+  let name = input.value;
+  if (name == "") {
+    alert("PLEASE ENTER ACCOUNT LINK")
+  } 
+  
+  else {
+    document.getElementById("mytext").innerHTML = "Searching Info.....Pls wait"
+    
+    setTimeout(function () {
+        document.getElementById("mytext").innerHTML = "Just kidding...."
+    },15000);
+    
+    setTimeout(function () {
+        document.getElementById("mytext").innerHTML = "HAHAHAHA"
+    },17000);
+    
+   document.getElementById("b-text").innerHTML = "Progress:"
+   
+   document.getElementById("progress").innerHTML = "0%"
+  
+   setTimeout(function () {
+        document.getElementById("progress").innerHTML = "10%"
+    },1000);
+    
+     setTimeout(function () {
+        document.getElementById("progress").innerHTML = "20%"
+    },2000);
+   
+    setTimeout(function () {
+        document.getElementById("progress").innerHTML = "30%"
+    },3000);
+    
+    setTimeout(function () {
+        document.getElementById("progress").innerHTML = "40%"
+    },4000);
+    
+    setTimeout(function () {
+        document.getElementById("progress").innerHTML = "50%"
+    },5000);
+    
+    setTimeout(function () {
+        document.getElementById("progress").innerHTML = "60%"
+    },6000);
+    
+    setTimeout(function () {
+        document.getElementById("progress").innerHTML = "70%"
+    },7000);
+    
+    setTimeout(function () {
+        document.getElementById("progress").innerHTML = "80%"
+    },8000);
+    
+    setTimeout(function () {
+        document.getElementById("progress").innerHTML = "90%"
+    },9000);
+    
+    setTimeout(function () {
+        document.getElementById("progress").innerHTML = "99%"
+    },10000);
+    
+    setTimeout(function () {
+        document.getElementById("progress").innerHTML = "100%"
+    },15000);
+  }
+  
+};
+
+</script>
+
+<style>
+html { 
+background: black; 
+height: 100%; 
+overflow: hidden;
+
+ } 
+ 
+ body { 
+ margin: 0; 
+ padding: 0; 
+ height: 100%; 
+ 
+ }
+ 
+  
+  
+  div { 
+  color: red; 
+  
+  } 
+  
+  
+  
+  .innerDiv { 
+  position: absolute; 
+  left: 50px; 
+  top: 150px
+  
+  }
+  
+ p {
+    
+      font-size:25px;
+      width:250px;
+      border:none;
+      background-color:black;
+      color:red;
+      position:absolute;
+      left:25px;
+     opacity:75%;
+  }
+  
+ #btn {
+     background:linear-gradient(to bottom, #000 , #0F0);
+     color:red;
+     font-height:bold;
+     width:55px;
+     height:30px;
+     border:1px solid #0F0; 
+     border-radius:5px;
+     position: absolute;
+     top: 127px;
+     left:118px;
+     
+ }
+ 
+ #input-text {
+     width:245px;
+     height: 25px;
+     border:1px solid #0F0;
+     border-radius:5px;
+     color:#0F0;
+     background-color:black;
+     position: absolute;
+     top:87px;
+     left:23px;
+     opacity:80%;
+ }
+
+::placeholder {
+  color: red; 
+  }
+ 
+ #title {
+     color:#252525;
+     position: absolute;
+     left:119px;
+     top:20px;
+     font-family: "Times New Roman", Times, serif;
+     font-weight:bold;
+     text-shadow:-1.5px -1.5px 2px #FF0014, 1.5px 1.5px 2px #FF0014;
+     
+ }
+ hr {
+  border: 1px solid #0F0;
+  position:absolute;
+  left:15px;
+  top:75px;
+  width:317px;
+  box-shadow:-1.5px -1.5px 2px #0F0; 
+}
+
+#p-box{
+    
+    position:absolute;
+    right:-275px;
+    border:none;
+    width:300px;
+    height:230px;
+    border-radius:10px;
+    box-shadow:-2px -2px 3px #0F0, 2px 2px 3px #0F0;
+    opacity:0.8;
+}
+
+#b-text {
+    
+      font-size:18px;
+      width:249px;
+      border:none;
+      background-color:black;
+      color:red;
+      position:absolute;
+      left:25px;
+      top:55px;
+     opacity:72%;
+    
+}
+
+#progress {
+     font-size:18px;
+      width:180px;
+      border:none;
+      background-color:black;
+      color:red;
+      position:absolute;
+      left:95px;
+      top:55px;
+     opacity:72%;
+}
+
+</style>
+ </head>
+ 
+ <body>
+ 
+ <h1 id="title">Fb-Hack</h1>
+ <hr>
+ 
+ <canvas id="binary-rain" style="width: 100%; height: 100%;"></canvas>
+<script src="./index.js"></script>
+<div id="wrapper">
+  <div class="innerDiv">
+    <span></span>
+    <br/>
+    <div id="p-box">
+    <p id="mytext"></p><br>
+    <i id="b-text"></i><i id="progress"></i><br>
+    <input type="text" id="input-text" placeholder=" Enter Account Link" required>
+    <input type="submit" id="btn" onclick="scan()">
+    </div>
+  </div>
+</div>
+ 
+ </body>
+ 
+ </html>
